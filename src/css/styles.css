@@ -1,0 +1,58 @@
+.mainTitle{
+    font-family: 'Press Start 2P', cursive;
+
+}
+
+
+body {
+    background-color: #000000; /* Fondo negro */
+    color: #FFFFFF; /* Texto blanco */
+  }
+  
+  h1, h2, h3 {
+    color: #6A0DAD; /* Morado */
+  }
+
+  h1 {
+    animation: blink 1s infinite;
+  }
+  
+  a {
+    color: #40E0D0; /* Turquesa */
+  }
+
+  
+  button {
+    border: 3px solid #40E0D0;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #39FF14;
+  }
+  
+  button:hover {
+    background-color: #40E0D0;
+    color: #000;
+    box-shadow: 0 0 10px 5px #6A0DAD;
+  }
+
+  header{
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Espacio entre elementos */
+    gap: 10px;
+  }
+
+  #profile-pic{
+    width: 100px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    /*border-radius: 50%; /* Hace la imagen circular (opcional) */
+
+  }
+
+  @keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
