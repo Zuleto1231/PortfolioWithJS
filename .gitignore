@@ -1,0 +1,22 @@
+# Sistema operativo
+.DS_Store         # macOS
+Thumbs.db         # Windows
+
+# Archivos temporales de editores
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+
+# Archivos de VSCode
+.vscode/
+
+# Archivos de sistema
+node_modules/     # solo si usas herramientas como npm o yarn
+dist/             # si generas archivos compilados (por ejemplo, con Webpack o Parcel)
+build/
+
+# Archivos de entorno
+.env
+.env.local
