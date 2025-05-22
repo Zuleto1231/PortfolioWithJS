@@ -1,0 +1,126 @@
+#start{
+  display: flex;
+  flex-direction: row; /* Coloca los elementos en una columna */
+  align-items: center;    /* Centra los elementos horizontalmente */
+  margin-top: 20vh;
+  gap: 10vh;
+}
+
+#aboutMeText {
+  display: flex;
+  flex-direction: column; /* Coloca los elementos en una columna */
+  align-items: center;    /* Centra los elementos horizontalmente */
+  margin-top: 20vh;
+  gap: 10vh;
+  background-color: #000; /* Fondo negro */
+  color: #40E0D0; /* Texto turquesa brillante */
+  font-family: 'Press Start 2P', cursive; /* Fuente retro */
+  font-size: 16px; /* Tamaño del texto */
+  padding: 20px; /* Espaciado interno */
+  border: 4px solid #6A0DAD; /* Borde morado brillante */
+  box-shadow: 0 0 20px 5px #6A0DAD; /* Efecto de brillo */
+  text-align: center; /* Centra el texto */
+  text-transform: uppercase; /* Convierte el texto a mayúsculas */
+  line-height: 1.5; /* Espaciado entre líneas */
+}
+
+#pixelCanvasContainer{
+  display: flex;
+  flex-direction: column;
+
+}
+.carousel-image {
+  width: 300px; /* Ancho reducido */
+  height: auto; /* Mantiene la proporción de la imagen */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para un efecto elegante */
+  margin: 10px; /* Espaciado alrededor de la imagen */
+}
+
+
+
+
+.mainTitle{
+    font-family: 'Press Start 2P', cursive;
+}
+
+ @keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+body {
+  background-color: #000000; /* Fondo negro */
+  color: #FFFFFF; /* Texto blanco */
+  height: 100%; /* Ocupa toda la altura de la ventana */
+  margin: 0; /* Elimina márgenes predeterminados */
+  display: flex; /* Activa flexbox */
+  flex-direction: column; /* Organiza los elementos en columna */
+  align-items: center; /* Centra horizontalmente */
+  justify-content: center; /* Centra verticalmente */
+}
+  
+  h1, h2, h3 {
+    color: #6A0DAD; /* Morado */
+  }
+
+  
+  a {
+    color: #40E0D0; /* Turquesa */
+  }
+
+  #carousel{
+    margin: 40px;
+
+  }
+
+  
+  button {
+    font-size: 24px; /* Aumenta el tamaño del texto */
+    padding: 20px 40px; /* Aumenta el espacio interno del botón */
+    width: auto;
+    height: auto;
+    font-family: 'Press Start 2P', cursive;
+    color: #FFFFFF;
+    background-color: #000000;
+    animation: blink 2s infinite;
+  }
+  
+  button:hover {
+    background-color: #40E0D0;
+    color: #000;
+    box-shadow: 0 0 10px 5px #6A0DAD;
+  }
+
+  header{
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Espacio entre elementos */
+    gap: 10px;
+  }
+
+  #profile-pic{
+    width: 100px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    /*border-radius: 50%; /* Hace la imagen circular (opcional) */
+
+    
+  }
+  html, body {
+    height: 100%; /* Ocupa el 100% de la altura de la ventana */
+    margin: 0;    /* Elimina márgenes predeterminados */
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en columna */
+  }
+
+  footer {
+    margin-top: auto; /* Empuja el footer hacia el final del contenedor */
+    text-align: center; /* Centra el texto del footer */
+    padding: 10px;
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+  }
+
+
+  
