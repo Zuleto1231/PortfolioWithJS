@@ -6,7 +6,7 @@
   gap: 10vh;
 }
 
-#aboutMeText, #xpText {
+#aboutMeText, #xpText, #projectsText {
   display: flex;
   flex-direction: column; /* Coloca los elementos en una columna */
   align-items: center;    /* Centra los elementos horizontalmente */

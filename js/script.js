@@ -265,7 +265,27 @@ function pressXp(e) {
 }
 
 function pressProjects(e) {
+  if (enabled===true) {
+  const infoDiv = document.getElementById('info');
+  const projectsText = document.createElement('p');
+  projectsText.innerHTML = `You can find my projects on my gitHub profile: <a href="https://github.com/Zuleto1231" target="_blank">GitHub</a>`;
+  projectsText.id = 'projectsText';
+  infoDiv.appendChild(projectsText);
+
+  // Mostramos el diálogo tipo cómic
+  showComicDialog('CHECK MY PROJECTS! 🚀');
+
+  // el boton queda estatico y le quitamos la animación
+  e.target.style.backgroundColor = '#40E0D0';
+  e.target.style.animation = 'none';
+  enabled = false; // Deshabilitamos el botón para evitar múltiples clics
 }
+  else {
+    enabledAllButtons();
+    eraseInfo();
+  }
+}
+
 
 function pressContact(e) {
 
