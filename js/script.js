@@ -103,7 +103,6 @@ function pressSkills(e) {
         'images/csharp.png',
         'images/python.png',
         'images/js.png',
-        'images/sharepoint.png',
         'images/powerbi.png',
         'images/powerautomate.png',
 
