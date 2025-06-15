@@ -6,12 +6,29 @@
   gap: 10vh;
 }
 
-#aboutMeText {
+#aboutMeText, #xpText {
   display: flex;
   flex-direction: column; /* Coloca los elementos en una columna */
   align-items: center;    /* Centra los elementos horizontalmente */
   margin-top: 20vh;
   gap: 10vh;
+  background-color: #000; /* Fondo negro */
+  color: #40E0D0; /* Texto turquesa brillante */
+  font-family: 'Press Start 2P', cursive; /* Fuente retro */
+  font-size: 16px; /* Tamaño del texto */
+  padding: 20px; /* Espaciado interno */
+  border: 4px solid #6A0DAD; /* Borde morado brillante */
+  box-shadow: 0 0 20px 5px #6A0DAD; /* Efecto de brillo */
+  text-align: center; /* Centra el texto */
+  text-transform: uppercase; /* Convierte el texto a mayúsculas */
+  line-height: 1.5; /* Espaciado entre líneas */
+}
+
+#contactText {
+  display: flex;
+  flex-direction: column; /* Coloca los elementos en una columna */
+  align-items: center;    /* Centra los elementos horizontalmente */
+  margin-top: 20vh;
   background-color: #000; /* Fondo negro */
   color: #40E0D0; /* Texto turquesa brillante */
   font-family: 'Press Start 2P', cursive; /* Fuente retro */
@@ -71,8 +88,11 @@ body {
   }
 
   #carousel{
-    margin: 40px;
-
+    margin: 40px auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
   }
 
   
@@ -123,4 +143,4 @@ body {
   }
 
 
-  
+

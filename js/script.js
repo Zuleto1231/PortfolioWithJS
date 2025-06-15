@@ -108,8 +108,16 @@ function pressSkills(e) {
 
     ]; 
 
+    const texts = [
+      "C#",
+      "Python",
+      "JavaScript",
+      "Power BI",
+      "Power Automate"
+    ]
+
     // Mostramos el diálogo tipo cómic
-    showComicDialog("I'M GOOD AT THOSE"); 
+    showComicDialog("I'M GOOD AT THOSE 😎"); 
 
     let currentIndex = 0;
 
@@ -124,10 +132,17 @@ function pressSkills(e) {
     //le quitamos la animacion al boton de la izquierda
     prevButton.style.animation = 'none';
 
+
+    //Agregamos la primera imagen 
     imgElement.classList.add('carousel-image');
     imgElement.src = images[currentIndex];
     imgElement.alt = 'Carousel Image';
     carouselContainer.appendChild(imgElement);
+
+
+    const xpText = document.createElement('p');
+    xpText.innerText = texts[currentIndex];
+    xpText.id = 'xpText';
 
 
     const nextButton = document.createElement('button');
@@ -139,6 +154,7 @@ function pressSkills(e) {
 
     const infoDiv = document.getElementById('info');
     infoDiv.appendChild(carouselContainer);
+    infoDiv.appendChild(xpText);
 
     // el boton queda estatico y le quitamos la animación
     e.target.style.backgroundColor = '#40E0D0';
@@ -148,13 +164,15 @@ function pressSkills(e) {
     function showPreviousImage() {
         currentIndex = (currentIndex - 1 + images.length) % images.length;
         imgElement.src = images[currentIndex];
+        xpText.innerText = texts[currentIndex];
     }
 
     function showNextImage() {
         currentIndex = (currentIndex + 1) % images.length;
         imgElement.src = images[currentIndex];
+        xpText.innerText = texts[currentIndex];
     }
-    
+
     }
   else {
     enabledAllButtons();
@@ -163,6 +181,84 @@ function pressSkills(e) {
 }
 
 function pressXp(e) {
+  if (enabled===true) {
+    const carouselContainer = document.createElement('div');
+    carouselContainer.id = 'carousel';
+    //agregamos un poco de margen al contenedor
+    carouselContainer.style.margin = '100px';
+
+    const images = ["images/XM.png",
+                    "images/XM.png" 
+
+    ]; 
+
+    const texts = [
+      "As an Operations Market Analyst in 2025, I developed intelligent dashboards using Power BI to support data-driven decision-making. I automated key business processes using RPA tools such as UiPath and Power Automate, as well as Python and SQL. I also analyzed and optimized operational workflows, engaged with internal and external stakeholders, and contributed to strategic planning and continuous improvement efforts.",
+      "During my Administrative Engineering internship in 2024, I led the development of an AI ChatBot as a Product Owner, aligning technical progress with business goals. I built an organizational analytics platform using Power BI and Power Automate to enhance data visibility and efficiency. I also managed vendor relationships for career development programs and explored OCR solutions to support contract automation initiatives."
+    ]
+
+    // Mostramos el diálogo tipo cómic
+    showComicDialog("I REMEMBER THOSE DAYS 🥹"); 
+
+    let currentIndex = 0;
+
+    const imgElement = document.createElement('img');
+    //agregamos una clas a las imagenes para ajustar el tamaño
+
+    
+    const prevButton = document.createElement('button');
+    prevButton.innerText = '<-';
+    prevButton.addEventListener('click', showPreviousImage);
+    carouselContainer.appendChild(prevButton);
+    //le quitamos la animacion al boton de la izquierda
+    prevButton.style.animation = 'none';
+
+
+    //Agregamos la primera imagen 
+    imgElement.classList.add('carousel-image');
+    imgElement.src = images[currentIndex];
+    imgElement.alt = 'Carousel Image';
+    carouselContainer.appendChild(imgElement);
+
+
+    const xpText = document.createElement('p');
+    xpText.innerText = texts[currentIndex];
+    xpText.id = 'xpText';
+
+
+    const nextButton = document.createElement('button');
+    nextButton.innerText = '->';
+    nextButton.addEventListener('click', showNextImage);
+    carouselContainer.appendChild(nextButton);
+    //le quitamos la animacion al boton de la derecha
+    nextButton.style.animation = 'none';
+
+    const infoDiv = document.getElementById('info');
+    infoDiv.appendChild(carouselContainer);
+    infoDiv.appendChild(xpText);
+
+    // el boton queda estatico y le quitamos la animación
+    e.target.style.backgroundColor = '#40E0D0';
+    e.target.style.animation = 'none';
+    enabled = false; // Deshabilitamos el botón para evitar múltiples clics
+
+    function showPreviousImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        imgElement.src = images[currentIndex];
+        xpText.innerText = texts[currentIndex];
+    }
+
+    function showNextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        imgElement.src = images[currentIndex];
+        xpText.innerText = texts[currentIndex];
+    }
+
+    }
+  else {
+    enabledAllButtons();
+    eraseInfo();
+  }
   
 
 
@@ -172,6 +268,31 @@ function pressProjects(e) {
 }
 
 function pressContact(e) {
+
+  if (enabled===true) {
+    // Creamos un párrafo dentro del div con id 'info'
+    const infoDiv = document.getElementById('info');
+    const contactText = document.createElement('p');
+    contactText.innerHTML = `Number: <a href="tel:+573024322068">+57 3024322068</a><br>
+                              Email: <a href="mailto:manuelzule2002@gmail.com">manuelzule2002@gmail.com</a>`;
+    contactText.id = 'contactText';
+    infoDiv.appendChild(contactText);
+
+    // Mostramos el diálogo tipo cómic
+    showComicDialog('CONTACT ME! 📞✉️');
+
+    // el boton queda estatico y le quitamos la animación
+    e.target.style.backgroundColor = '#40E0D0';
+    e.target.style.animation = 'none';
+    enabled = false; // Deshabilitamos el botón para evitar múltiples clics
+
+    //desaparecemos momentaneamente los otros botones
+
+  }
+  else {
+    enabledAllButtons();
+    eraseInfo();
+  }
 }
 
 function enabledAllButtons() {
@@ -211,7 +332,7 @@ function pressAboutMe(e) {
     infoDiv.appendChild(aboutMeText);
 
     // Mostramos el diálogo tipo cómic
-    showComicDialog('THAT\'S ME!');
+    showComicDialog('THAT\'S ME! 😎');
 
     // el boton queda estatico y le quitamos la animación
     e.target.style.backgroundColor = '#40E0D0';
